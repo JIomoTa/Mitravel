@@ -1,0 +1,99 @@
+.swiper-video {
+    overflow-x: hidden;
+    overflow-y: initial;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.swiper-slide-video {
+    position: relative;
+    background: #e3e3e3;
+    border-radius: 8px;
+    min-height: 550px;
+    width: 890px;
+    transition: transform 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.swiper-slide-video::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.461617) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.slide-1 {
+    background-image: url(../../img/videos-slide1.jpg);
+}
+
+.slide-2 {
+    background-image: url(../../img/videos-slide2.jpg);
+}
+
+.slide-3 {
+    background-image: url(../../img/videos-slide3.jpg);
+}
+
+.swiper-video .swiper-slide-active {
+    transform: scale(1.16 ,1.16);
+    transition: transform 0.3s;
+}
+
+.swiper-video .swiper-slide-active::after {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.slide-play {
+    position: absolute;
+    left: 48px;
+    top: 40px;
+    width: 112px;
+    height: 112px;
+    background-image: url(../../img/slide-play.svg);
+}
+
+.slide-title {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--white-color);
+    position: relative;
+    z-index: 5;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    transition: transform 0.3s;
+    transform: translateY(200px);
+}
+
+.swiper-slide-active .slide-title {
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+
+.featured-videos {
+    padding-top: 150px;
+}
+
+.featured-videos__descr {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 650px;
+    font-family: 'SFCompact', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #788692;
+    margin-top: 26px;
+}

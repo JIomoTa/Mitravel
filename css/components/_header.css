@@ -1,0 +1,156 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 23px 55px 39px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.social__link {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.3s;
+}
+
+.social__link:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin-left: -19px;
+}
+
+.logo {
+    transition: color 0.3;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+.burger {
+    width: 48px;
+    height: 10px;
+    position: relative;
+    transition: background-color 0.3;
+}
+
+.burger:hover .burger-line {
+    background-color: var(--accent-color);
+    transition: background-color 0.3s;
+}
+
+.burger-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+.burger-line:last-child {
+    top: auto;
+    bottom: 0;
+}
+
+.menu {
+    position: fixed;
+    left: -150vw;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: var(--neptune-color);
+    transition: left 0.5s;
+}
+
+.menu--visible {
+    left: 0;
+    transition: left 0.5s;
+}
+
+.menu__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 40px;
+    overflow-y: auto;
+}
+
+.menu__link {
+    margin-bottom: 20px;
+    display: inline-block;
+    color: var(--white-color);
+    transition: color 0.3s;
+}
+
+.menu__link:hover {
+    color: var(--black-color);
+    transition: color 0.3s;
+}
+
+.menu__nav {
+    width: 100%;
+    height: 100%;
+}
+
+.menu__close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.menu__close-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color);
+}
+
+.menu__close:hover .menu__close-line {
+    background-color: var(--black-color);
+}
+
+.menu__close-line:first-child {
+    transform: rotate(45deg);
+}
+
+.menu__close-line:last-child {
+    transform: rotate(-45deg);
+}
